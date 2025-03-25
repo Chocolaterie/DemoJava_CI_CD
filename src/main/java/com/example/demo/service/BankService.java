@@ -13,7 +13,7 @@ public class BankService {
     public ServiceResponseDTO<Float> debit(float amount){
         // 2300 €
         // CAS : Erreur 789
-        if (amount > 2300){
+        if (amount > 0){
             return ServiceResponseDTO.buildResponse("789", "Solde insuffisant");
         }
 
