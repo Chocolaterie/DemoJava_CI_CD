@@ -21,4 +21,15 @@ public class BankService {
         return ServiceResponseDTO.buildResponseWithData("207", "Prélèvement effectué avec succès", 2300-amount);
     }
 
+
+    public ServiceResponseDTO<Float> credit(float amount){
+        // 2300 €
+        // CAS : Erreur 709
+        if (amount < 1){
+            return ServiceResponseDTO.buildResponse("709", "Le montant doit être positive");
+        }
+
+        // CAS : Succès 201
+        return ServiceResponseDTO.buildResponseWithData("201", "Solde approvisionné", amount);
+    }
 }
