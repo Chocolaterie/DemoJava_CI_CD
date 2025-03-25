@@ -35,7 +35,7 @@ jobs:
         host: 188.245.157.167
         username: root
         password: totonono
-        source: "build/libs/demo-0.0.1-SNAPSHOT.jar"
+        source: "/home/runner/work/DemoJava_CI_CD/DemoJava_CI_CD/build/libs/demo-0.0.1-SNAPSHOT.jar"
         target: /home/isaac/
 
     - name: Restart app in server
